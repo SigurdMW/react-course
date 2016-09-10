@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var routes = require('./config/routes');
 
 // where in the DOM to show the app
 var mainAppElement = document.getElementById('app');
@@ -11,7 +12,7 @@ var mainAppElement = document.getElementById('app');
 #
 #   COMPONENTS
 #
-*/
+
 
 // MAIN CLASS
 var MainClass = React.createClass({
@@ -45,7 +46,7 @@ var LeftSideMenuHeader = React.createClass({
   propTypes: {
     logoUrl: React.PropTypes.string.isRequired,
     logoAltDesc: React.PropTypes.string
-  },
+  }, 
   render: function(){
     return (
         <div className="leftside-menu__header">
@@ -197,9 +198,15 @@ var CustomerListOverview = React.createClass({
   }
 });
 
-
+var TestComp = function(props){
+  return (
+    <a href={props.test}>Mikkel</a>
+  );
+}
+*/
+//<MainClass />
 ReactDOM.render(
-  <MainClass />,
+  routes,
   mainAppElement
 );
 
