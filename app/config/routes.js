@@ -8,11 +8,16 @@ var Main = require('../components/Main');
 var Home = require('../components/Home');
 var CustomerList = require('../components/CustomerList');
 
+var PromptContainer = require('../containers/PromptContainer');
+
+
 var routes = (
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Home} />
       <Route path="/customers" component={CustomerList} />
+      <Route path="playerOne" header="Player One" component={PromptContainer} />
+      <Route path="playerTwo/:playerOne" header="Player Two" component={PromptContainer} />
     </Route>
   </Router>
 );
