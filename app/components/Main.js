@@ -1,7 +1,7 @@
 var React = require('react');
 
 // MAIN CLASS
-var MainClass = React.createClass({
+var Main = React.createClass({
    closeGlobalMenu: function(){
     document.querySelector('.leftside-menu').classList.remove('open');
     document.querySelector('.leftside-menu__overlay').classList.remove('show');
@@ -141,4 +141,4 @@ var ContentContainer = React.createClass({
   }
 });
 
-module.exports = MainClass;
+module.exports = Main;
